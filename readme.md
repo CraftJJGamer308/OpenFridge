@@ -1,6 +1,8 @@
 # OpenFridge Project 2025
 Jeongjoo Lim, Aron Feher, Marie Schrotter, Jakub Stanczyk
 
+Part of TUM.ai Makeathon 2025
+
 # Usage: 
 
 * run "node server" on the console
