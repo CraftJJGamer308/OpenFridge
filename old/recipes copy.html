@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Results</title>
+    <style>
+        #results {
+            width: 80%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Processing Results</h1>
+    <p>pls edit the following list if necessary. if ur done click continue</p>
+    
+    <form action="/getRecipe" method="POST">
+        <textarea name="results" id="results"></textarea> <br>
+        <button type="submit">Upload</button>
+    </form>
+    
+    <br>
+    <a href="/">Go back</a>
+
+
+    <script>
+        // Fetch the results from the server
+        fetch('/productResults')
+            .then(response => response.json())
+            .then(data => {
+                // document.getElementById('results').innerHTML = data.result;
+                document.getElementById('results').value = data.result;
+                
+            })
+            .catch(error => {
+                document.getElementById('results').innerText = 'Error fetching results.';
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>

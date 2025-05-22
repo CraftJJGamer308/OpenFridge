@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFridge</title>
+     <!-- Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <!-- Custom CSS (optional) -->
+    <link rel="stylesheet" href="styles.css">
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/openfridge_cropped[1].png" alt="Logo" width="300px" class="rounded mx-auto d-block my-5">
+    </div>
+    <div class = "container">
+        <h1>Do you know this fridge?</h1>
+        <p>Please correct any mistakes or add any items we might have missed. Thank you!</p>
+        
+        <form id="getRecipe" action="/getRecipe" method="POST">
+            <textarea name="results" id="results"></textarea> <br>
+            <a onclick="document.getElementById('getRecipe').submit()" class="btn btn-secondary btn-lg">Submit</a>
+        </form>
+        
+        <br>
+        <a href="/">Go back</a>
+        
+        
+        <script>
+            // Fetch the results from the server
+            fetch('/productResults')
+            .then(response => response.json())
+            .then(data => {
+                // document.getElementById('results').innerHTML = data.result;
+                document.getElementById('results').value = data.result;
+                
+            })
+            .catch(error => {
+                document.getElementById('results').innerText = 'Error fetching results.';
+                console.error('Error:', error);
+            });
+        </script>
+    </div>
+</body>
+</html>

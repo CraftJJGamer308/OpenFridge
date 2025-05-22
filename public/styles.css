@@ -1,0 +1,82 @@
+.hero-section {
+    background: #006243;
+    padding: 50px 0;
+    color: #cddf1a;
+    max-width: 30%;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    justify-content: center;
+    text-align: center;
+    padding: 3%;
+}
+
+
+.navbar {
+    background: #006243;
+    justify-content: center;
+}
+footer {
+    background: #006243;
+    color: #cddf1a;
+    padding: 30px 0;
+    max-width: 30%;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+body {
+    background-color: #082C30;
+    color:#cddf1a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    justify-content: center;
+}
+input[type ="file"] {
+    background-color: #04374C;
+    border-color: #04374C;
+    color:#cddf1a;
+}
+.catchphrase {
+    color:#082C30;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg, #cddf1a, #21C1AD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+textarea {
+    background-color: #04374C;
+    color: white;
+    border-radius: 50px;
+    margin: 50px;
+    padding: 30px;
+    height: 500px;
+
+    width: 60%;
+}
+
+
+.recipe {
+            
+    border: 5px solid #333;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: linen;
+}
+
+.recipe > a {
+    font-size: large;
+    color: #082C30;
+}
+
+.recipe > img {
+    border-radius: 20px;
+}
