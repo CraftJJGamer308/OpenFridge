@@ -14,7 +14,7 @@ Part of TUM.ai Makeathon 2025
 
 # Explanation:
 
-* This web app is implemented with node.js expressjs. It is designed to be as a server - client devices can connect to this web app via its IP address.
+* This web app is implemented with node.js expressjs. It is designed to work as a server - client devices can connect to this web app via its IP address.
 * After uploading the image, it is stored at "./uploads/bild.*" and then used for image recognition. 
 * In addition, "./productList.txt" and "/public/recipes/*.*" files are generated.
 * "./productList.txt" stores the product present in the fridge so that it could be reused if necessary.
